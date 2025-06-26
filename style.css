@@ -1,0 +1,252 @@
+
+      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      :root {
+        --neon-blue: #08f7fe;
+        --neon-pink: #fe53bb;
+        --neon-green: #09fbd3;
+        --dark-bg: #0f0f1a;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--dark-bg);
+        color: white;
+        overflow-x: hidden;
+      }
+
+      .orbitron {
+        font-family: "Orbitron", sans-serif;
+      }
+
+      .neon-text-blue {
+        text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+        color: var(--neon-blue);
+      }
+
+      .neon-text-pink {
+        text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
+        color: var(--neon-pink);
+      }
+
+      .neon-text-green {
+        text-shadow: 0 0 10px var(--neon-green), 0 0 20px var(--neon-green);
+        color: var(--neon-green);
+      }
+
+      .neon-border-blue {
+        border: 2px solid var(--neon-blue);
+        box-shadow: 0 0 10px var(--neon-blue), inset 0 0 10px var(--neon-blue);
+      }
+
+      .neon-border-pink {
+        border: 2px solid var(--neon-pink);
+        box-shadow: 0 0 10px var(--neon-pink), inset 0 0 10px var(--neon-pink);
+      }
+
+      .neon-border-green {
+        border: 2px solid var(--neon-green);
+        box-shadow: 0 0 10px var(--neon-green), inset 0 0 10px var(--neon-green);
+      }
+
+      .glow-hover:hover {
+        filter: drop-shadow(0 0 8px currentColor);
+      }
+
+      .card-hover:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(9, 251, 211, 0.3);
+      }
+
+      .section-title {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 2rem;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+        border-radius: 3px;
+      }
+
+      #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .skill-bar {
+        height: 8px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+      }
+
+      .skill-progress {
+        height: 100%;
+        border-radius: 4px;
+        background: linear-gradient(90deg, var(--neon-blue), var(--neon-green));
+        position: relative;
+      }
+
+      .skill-progress::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.8) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        animation: shine 2s infinite;
+      }
+
+      @keyframes shine {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      .timeline-item {
+        position: relative;
+        padding-left: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: 0.7rem;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background: linear-gradient(
+          to bottom,
+          var(--neon-blue),
+          var(--neon-pink)
+        );
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background: var(--neon-green);
+        box-shadow: 0 0 10px var(--neon-green);
+      }
+
+      .project-card {
+        background: rgba(15, 15, 26, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(8, 247, 254, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .project-card:hover {
+        border-color: var(--neon-blue);
+        box-shadow: 0 0 20px rgba(8, 247, 254, 0.3);
+      }
+
+      .contact-input {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .contact-input:focus {
+        border-color: var(--neon-blue);
+        box-shadow: 0 0 10px rgba(8, 247, 254, 0.3);
+        background: rgba(8, 247, 254, 0.05);
+      }
+
+      .btn-neon {
+        background: linear-gradient(45deg, var(--neon-blue), var(--neon-green));
+        color: black;
+        font-weight: bold;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .btn-neon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, var(--neon-pink), var(--neon-blue));
+        transition: all 0.4s ease;
+        z-index: -1;
+      }
+
+      .btn-neon:hover::before {
+        left: 0;
+      }
+
+      .floating {
+        animation: floating 6s ease-in-out infinite;
+      }
+
+      @keyframes floating {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .pulse {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(9, 251, 211, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 15px rgba(9, 251, 211, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(9, 251, 211, 0);
+        }
+      }
+
+      .grid-bg {
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 30px 30px;
+      }
+
+      .glass-effect {
+        background: rgba(15, 15, 26, 0.5);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+   

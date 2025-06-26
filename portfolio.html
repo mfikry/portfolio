@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Fikry - Portfolio</title>
+    <link rel="icon" href="images/icon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap 5 JS (plus Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="min-h-screen bg-gray-900 text-white">
+    <!-- Background Animation -->
+    <div id="vanta-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-effect">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#" class="text-2xl font-bold orbitron neon-text-blue">MF.</a>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-white hover:text-blue-400 transition duration-300"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-white hover:text-pink-400 transition duration-300"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="text-white hover:text-green-400 transition duration-300"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="text-white hover:text-blue-400 transition duration-300"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="text-white hover:text-pink-400 transition duration-300"
+              >Contact</a
+            >
+          </div>
+          <button class="md:hidden text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+    >
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+      >
+        <!-- TEXT SIDE -->
+        <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+          <div class="max-w-2xl mx-auto md:mx-0">
+            <!-- Tambahan pembungkus agar konten rata -->
+            <h1
+              class="text-4xl md:text-6xl font-bold mb-4 orbitron neon-text-blue"
+            >
+              Hi, I'm <span class="neon-text-pink">Muhammad Fikry</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl mb-6 neon-text-green">
+              IT Specialist
+            </h2>
+            <p class="text-lg mb-8 leading-relaxed">
+              Computer Science graduate with experience in software development,
+              IT support, and quality assurance. Skilled in troubleshooting,
+              testing, and delivering efficient technical solutions across
+              various IT environments.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start"
+            >
+              <a
+                href="#contact"
+                class="px-8 py-3 bg-gradient-to-r from-blue-400 to-green-400 text-black font-bold rounded-full hover:shadow-lg hover:shadow-blue-400/30 transition duration-300"
+                >Contact Me</a
+              >
+              <a
+                href="resume.pdf"
+                class="px-8 py-3 border-2 border-blue-400 text-blue-400 font-bold rounded-full hover:bg-blue-400 hover:bg-opacity-10 transition duration-300"
+                >My Resume</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- AVATAR SIDE -->
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative w-64 h-64 md:w-80 md:h-80">
+            <!-- Avatar Circle -->
+            <div
+              class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400 to-green-400 flex items-center justify-center pulse"
+            >
+              <img
+                src="images/pas foto.jpg"
+                alt="Profile"
+                class="w-full h-full rounded-full object-cover border-4 border-white"
+              />
+            </div>
+
+            <!-- Blurred Background Effects -->
+            <div
+              class="absolute -top-10 -left-10 w-20 h-20 rounded-full bg-pink-400 opacity-30 filter blur-xl"
+            ></div>
+            <div
+              class="absolute -bottom-10 -right-10 w-24 h-24 rounded-full bg-blue-400 opacity-30 filter blur-xl"
+            ></div>
+
+            <!-- Floating Tech Icons -->
+            <div
+              class="absolute -top-5 left-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-lg"
+            >
+              <i class="fab fa-react text-blue-400 text-xl"></i>
+            </div>
+            <div
+              class="absolute top-10 -right-5 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-lg"
+            >
+              <i class="fab fa-html5 text-yellow-400 text-xl"></i>
+            </div>
+            <div
+              class="absolute bottom-5 -left-5 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-lg"
+            >
+              <i class="fab fa-python text-green-400 text-xl"></i>
+            </div>
+            <div
+              class="absolute -bottom-5 right-5 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center shadow-lg"
+            >
+              <i class="fas fa-database text-purple-400 text-xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Arrow -->
+      <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+        <a href="#about" class="text-white animate-bounce">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900 bg-opacity-90 relative">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold mb-16 text-center section-title neon-text-blue"
+        >
+          About Me
+        </h2>
+
+        <div class="flex flex-col lg:flex-row items-center">
+          <div class="lg:w-1/3 mb-12 lg:mb-0 flex justify-center">
+            <div class="relative w-64 h-64 md:w-80 md:h-80">
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400 to-green-400 p-1"
+              >
+                <img
+                  src="images/pasfoto2.JPG"
+                  alt="Profile"
+                  class="w-full h-full rounded-2xl object-cover"
+                />
+              </div>
+              <div
+                class="absolute -bottom-5 -right-5 w-24 h-24 bg-pink-400 rounded-full opacity-20 filter blur-xl"
+              ></div>
+            </div>
+          </div>
+
+          <div class="lg:w-2/3 lg:pl-12">
+            <h3 class="text-2xl font-bold mb-6 neon-text-pink">Who am I?</h3>
+            <p class="text-lg mb-8">
+              Experienced in developing responsive and visually appealing web
+              applications using modern frontend technologies. Skilled in
+              creating clean and efficient code with HTML, CSS, JavaScript, and
+              frameworks such as React and Next.js. Proficient in translating
+              design mockups into functional user interfaces, optimizing
+              performance, and ensuring cross-browser compatibility. Strong
+              understanding of UX/UI principles and accessibility standards.
+              Team-oriented with excellent problem-solving and communication
+              skills, dedicated to delivering high-quality, user-centric web
+              solutions.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="text-xl font-bold mb-4 neon-text-green">
+                  Personal Skills
+                </h4>
+                <ul class="space-y-3">
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                    <span>Critical Thinking</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                    <span>Team Collaboration</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                    <span>Problem Solving</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-xl font-bold mb-4 neon-text-blue">
+                  Technical Skills
+                </h4>
+                <div class="space-y-4">
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span>SQL, MySQL, PostgreSQL</span>
+                      <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span>PHP, Python, React, HTML/CSS</span>
+                      <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span>Next JS, Laravel, Selenium</span>
+                      <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span
+                        >Operating System, Automation Testing, Hardware &
+                        Network</span
+                      >
+                      <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span>MS Office</span>
+                      <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-800 bg-opacity-70 relative">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold mb-16 text-center section-title neon-text-pink"
+        >
+          Experience & Education
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold mb-8 neon-text-blue">Experience</h3>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="bg-gray-900 bg-opacity-50 p-6 rounded-xl">
+                <h4 class="text-xl font-bold mb-2 neon-text-green">
+                  PT Pulo Mas Jaya (JAKPRO Group)
+                </h4>
+                <p class="text-blue-300 mb-2">
+                  Internship | October 1, 2021 - December 28, 2021
+                </p>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>
+                    Digitized company assets based on accounting data using
+                    asset management software Coordinated with the IT team and
+                    end-users to resolve daily operational issues
+                  </li>
+                  <li>
+                    Tested the internal ERP system (UI and functionality),
+                    documented bugs, and provided improvement suggestions.
+                  </li>
+                  <li>
+                    Coordinated with the IT team and end-users to resolve daily
+                    operational issues
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-8 neon-text-green">Education</h3>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="bg-gray-900 bg-opacity-50 p-6 rounded-xl">
+                <h4 class="text-xl font-bold mb-2 neon-text-blue">
+                  Bachelor of Computer Science
+                </h4>
+                <p class="text-blue-300 mb-2">
+                  Kalbis Institute (now Universitas Kalbis) | 2018 - 2022
+                </p>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>Specialized in Soft Computing</li>
+                  <li>GPA: 3.52/4.00</li>
+                  <li>
+                    Final project: Development of a Transportation Equipment
+                    Classification Application Based on Digital Image for Asset
+                    Listing (Case Study: PT Pulo Mas Jaya)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="bg-gray-900 bg-opacity-50 p-6 rounded-xl">
+                <h4 class="text-xl font-bold mb-2 neon-text-blue">
+                  Certifications
+                </h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>
+                    <strong
+                      >Setting a Foundation for Successful Test
+                      Automation</strong
+                    >
+                    – Applitools<br />
+                    <a
+                      href="https://testautomationu.applitools.com/certificate/?id=08b4a07e"
+                      class="text-blue-300"
+                      target="_blank"
+                      >Lihat Sertifikat</a
+                    >
+                  </li>
+                  <li>
+                    <strong>Coding Foundations</strong> – Sololearn<br />
+                    <a
+                      href="https://www.sololearn.com/certificates/CC-JNEIN8OU"
+                      class="text-blue-300"
+                      target="_blank"
+                      >Lihat Sertifikat</a
+                    >
+                  </li>
+                  <li>
+                    <strong>Introduction to Pytest</strong> – Applitools<br />
+                    <a
+                      href="https://testautomationu.applitools.com/certificate/?id=3b9de348"
+                      class="text-blue-300"
+                      target="_blank"
+                      >Lihat Sertifikat</a
+                    >
+                  </li>
+                  <li>
+                    <strong>SQL Intermediate</strong> – Sololearn<br />
+                    <a
+                      href="https://www.sololearn.com/certificates/CC-UXLHBNUN"
+                      class="text-blue-300"
+                      target="_blank"
+                      >Lihat Sertifikat</a
+                    >
+                  </li>
+                  <li>
+                    <strong>AWS Cloud untuk Pemula</strong> – Udemy<br />
+                    <a
+                      href="https://ude.my/UC-188cd859-e791-4e5c-a455-9a7d2a024a4a"
+                      class="text-blue-300"
+                      target="_blank"
+                      >Lihat Sertifikat</a
+                    >
+                  </li>
+                  <li>
+                    <strong>Responsive Web Design</strong> – freeCodeCamp<br />
+                    <a
+                      href="https://freecodecamp.org/certification/fcc89fa3b9c-17e0-43e3-8f3f-13d54804a829/responsive-web-design"
+                      class="text-blue-300"
+                      target="_blank"
+                      >Lihat Sertifikat</a
+                    >
+                  </li>
+                  <li>
+                    <strong>SEO with AI</strong> – Sololearn<br />
+                    <a
+                      href="https://www.sololearn.com/certificates/CC-OQ99JACM"
+                      class="text-blue-300"
+                      target="_blank"
+                      >Lihat Sertifikat</a
+                    >
+                  </li>
+                  <li>
+                    <strong>Python Developer</strong> – Sololearn<br />
+                    <a
+                      href="https://www.sololearn.com/certificates/CC-E4XOQPRV"
+                      class="text-blue-300"
+                      target="_blank"
+                      >Lihat Sertifikat</a
+                    >
+                  </li>
+                  <li>
+                    <strong>JavaScript Algorithms and Data Structures</strong> –
+                    freeCodeCamp<br />
+                    <a
+                      href="https://freecodecamp.org/certification/fcc89fa3b9c-17e0-43e3-8f3f-13d54804a829/javascript-algorithms-and-data-structures-v8"
+                      class="text-blue-300"
+                      target="_blank"
+                      >Lihat Sertifikat</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-900 bg-opacity-90 relative">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold mb-16 text-center section-title neon-text-green"
+        >
+          My Projects
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="project-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg"
+          >
+            <div
+              class="mb-4 h-40 bg-gray-800 rounded-lg flex items-center justify-center"
+            >
+              <img
+                src="images/project1.png"
+                alt="Transportation Equipment Classification"
+                class="w-full h-full object-cover rounded-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="showImage(this)"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-2 neon-text-blue">
+              Transportation Equipment Classification
+            </h3>
+            <p class="text-gray-300 mb-4">
+              A machine learning project for classifying transportation
+              equipment based on digital images, designed to streamline asset
+              listing processes.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded-full text-sm"
+                >Machine Learning</span
+              >
+              <span
+                class="px-3 py-1 bg-green-900 bg-opacity-50 text-green-300 rounded-full text-sm"
+                >Python</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded-full text-sm"
+                >GUI</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="project-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg"
+          >
+            <div
+              class="mb-4 h-40 bg-gray-800 rounded-lg flex items-center justify-center"
+            >
+              <img
+                src="images/project2.png"
+                alt="Lecturer Workload System"
+                class="w-full h-full object-cover rounded-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="showImage(this)"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-2 neon-text-pink">
+              Lecturer Workload System
+            </h3>
+            <p class="text-gray-300 mb-4">
+              A web application to manage and monitor lecturers' workloads
+              efficiently using PHP and CodeIgniter framework.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded-full text-sm"
+                >PHP</span
+              >
+              <span
+                class="px-3 py-1 bg-green-900 bg-opacity-50 text-green-300 rounded-full text-sm"
+                >CodeIgniter</span
+              >
+              <span
+                class="px-3 py-1 bg-yellow-900 bg-opacity-50 text-yellow-300 rounded-full text-sm"
+                >MySQL</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="project-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg"
+          >
+            <div
+              class="mb-4 h-40 bg-gray-800 rounded-lg flex items-center justify-center"
+            >
+              <img
+                src="images/project3.png"
+                alt="Weather App"
+                class="w-full h-full object-cover rounded-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="showImage(this)"
+              />
+            </div>
+            <a
+              href="https://perkiraan-cuaca-dengan-api.vercel.app/"
+              class="block"
+            >
+              <h3 class="text-xl font-bold mb-2 neon-text-green">
+                Weather App
+              </h3>
+            </a>
+            <p class="text-gray-300 mb-4">
+              Web-based weather applications using the OpenWeatherMap API are
+              designed to provide up-to-date weather information with a simple
+              and intuitive interface.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded-full text-sm"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded-full text-sm"
+                >API</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-900 bg-opacity-50 text-cyan-300 rounded-full text-sm"
+                >Tailwind CSS</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="project-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg"
+          >
+            <div
+              class="mb-4 h-40 bg-gray-800 rounded-lg flex items-center justify-center"
+            >
+              <img
+                src="images/project4.png"
+                alt="Prayer Time"
+                class="w-full h-full object-cover rounded-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="showImage(this)"
+              />
+            </div>
+            <a href="https://jadwal-sholat-tau.vercel.app/" class="block">
+              <h3 class="text-xl font-bold mb-2 neon-text-blue">Prayer Time</h3>
+            </a>
+            <p class="text-gray-300 mb-4">
+              A React-based application that displays accurate daily prayer
+              times using the Aladhan API.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded-full text-sm"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded-full text-sm"
+                >API</span
+              >
+              <span
+                class="px-3 py-1 bg-green-900 bg-opacity-50 text-green-300 rounded-full text-sm"
+                >JavaScript</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="project-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg"
+          >
+            <div
+              class="mb-4 h-40 bg-gray-800 rounded-lg flex items-center justify-center"
+            >
+              <img
+                src="images/project5.png"
+                alt="Website Store"
+                class="w-full h-full object-cover rounded-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="showImage(this)"
+              />
+            </div>
+            <a href="https://website-store-jet.vercel.app/" class="block">
+              <h3 class="text-xl font-bold mb-2 neon-text-pink">
+                Website Store
+              </h3>
+            </a>
+            <p class="text-gray-300 mb-4">
+              This project is a frontend-only website store built using Next.js,
+              React, and TypeScript, with API integration for managing products.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded-full text-sm"
+                >Next JS</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded-full text-sm"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-yellow-900 bg-opacity-50 text-yellow-300 rounded-full text-sm"
+                >TypeScript</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 6   -->
+          <div
+            class="project-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg"
+          >
+            <div
+              class="mb-4 h-40 bg-gray-800 rounded-lg flex items-center justify-center"
+            >
+              <img
+                src="images/project6.png"
+                alt="Website Store"
+                class="w-full h-full object-cover rounded-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="showImage(this)"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-2 neon-text-pink">
+              Website Store Admin
+            </h3>
+            <p class="text-gray-300 mb-4">
+              This project is an admin dashboard for managing the store, built
+              using Next.js, React, TypeScript, Prisma, PostgreSQL, and Clerk
+              for authentication. It provides a secure interface for managing
+              products, users, and orders through API integration. Data is
+              stored in a PostgreSQL database, managed with Prisma as the ORM.
+              Clerk handles authentication and user management. The dashboard
+              allows admins to perform CRUD operations on products and monitor
+              store activities efficiently
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded-full text-sm"
+                >Next JS</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded-full text-sm"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-yellow-900 bg-opacity-50 text-yellow-300 rounded-full text-sm"
+                >TypeScript</span
+              >
+              <span
+                class="px-3 py-1 bg-green-900 bg-opacity-50 text-green-300 rounded-full text-sm"
+                >API</span
+              >
+              <span
+                class="px-3 py-1 bg-pink-900 bg-opacity-50 text-pink-300 rounded-full text-sm"
+                >Clerk</span
+              >
+              <span
+                class="px-3 py-1 bg-indigo-900 bg-opacity-50 text-indigo-300 rounded-full text-sm"
+                >Prisma</span
+              >
+              <span
+                class="px-3 py-1 bg-red-900 bg-opacity-50 text-red-300 rounded-full text-sm"
+                >PostgreSQL</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-900 bg-opacity-50 text-cyan-300 rounded-full text-sm"
+                >Tailwind CSS</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 7 -->
+          <div
+            class="project-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg"
+          >
+            <div
+              class="mb-4 h-40 bg-gray-800 rounded-lg flex items-center justify-center"
+            >
+              <img
+                src="images/project7.png"
+                alt="ToDoList App"
+                class="w-full h-full object-cover rounded-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="showImage(this)"
+              />
+            </div>
+            <a href="https://to-do-list-iota-murex.vercel.app/" class="block">
+              <h3 class="text-xl font-bold mb-2 neon-text-green">
+                ToDoList App
+              </h3>
+            </a>
+            <p class="text-gray-300 mb-4">
+              This To-Do List app helps users manage their tasks easily with
+              calendar view and search functionality.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded-full text-sm"
+                >Next JS</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded-full text-sm"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-yellow-900 bg-opacity-50 text-yellow-300 rounded-full text-sm"
+                >TypeScript</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Popup -->
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      aria-labelledby="imageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img
+              id="modalImage"
+              class="img-fluid w-100"
+              src=""
+              alt="Project Image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800 bg-opacity-70 relative">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold mb-16 text-center section-title neon-text-blue"
+        >
+          Get In Touch
+        </h2>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="lg:w-1/2">
+            <h3 class="text-2xl font-bold mb-6 neon-text-pink">
+              Contact Information
+            </h3>
+            <p class="text-lg mb-8">
+              Feel free to reach out to me for any questions or opportunities.
+              I'll get back to you as soon as possible!
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="bg-blue-400 bg-opacity-20 p-3 rounded-full mr-4">
+                  <i class="fas fa-envelope text-blue-400 text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg">Email</h4>
+                  <a
+                    href="mailto:mfikry.id@gmail.com"
+                    class="text-blue-300 hover:text-blue-400 transition duration-300"
+                    >mfikry.id@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-pink-400 bg-opacity-20 p-3 rounded-full mr-4">
+                  <i class="fas fa-phone-alt text-pink-400 text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg">Phone</h4>
+                  <a
+                    href="tel:082297016308"
+                    class="text-pink-300 hover:text-pink-400 transition duration-300"
+                    >082297016308</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-green-400 bg-opacity-20 p-3 rounded-full mr-4">
+                  <i class="fas fa-map-marker-alt text-green-400 text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg">Location</h4>
+                  <p class="text-green-300">Jakarta, Indonesia</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h4 class="text-xl font-bold mb-4 neon-text-green">
+                Connect With Me
+              </h4>
+              <div class="flex space-x-4">
+                <a
+                  href="https://www.linkedin.com/in/muhammadfikry61"
+                  class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition duration-300"
+                >
+                  <i class="fab fa-linkedin-in text-white text-xl"></i>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/mhmmadfikryyy/"
+                  class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-pink-500 transition duration-300"
+                >
+                  <i class="fab fa-instagram text-white text-xl"></i>
+                </a>
+                <a
+                  href="https://github.com/mfikry"
+                  class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-800 transition duration-300"
+                >
+                  <i class="fab fa-github text-white text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <form id="contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block mb-2 font-medium"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div>
+                <label for="email" class="block mb-2 font-medium"
+                  >Your Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none"
+                  placeholder="john@example.com"
+                />
+              </div>
+            </div>
+            <div>
+              <label for="subject" class="block mb-2 font-medium"
+                >Subject</label
+              >
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none"
+                placeholder="Let me know how I can help you"
+              />
+            </div>
+            <div>
+              <label for="message" class="block mb-2 font-medium"
+                >Your Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none"
+                placeholder="Hi Muhammad, I would like to..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full px-6 py-3 bg-gradient-to-r from-blue-400 to-green-400 text-black font-bold rounded-lg hover:shadow-lg transition duration-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+        <!-- Notifikasi -->
+        <div id="notif" class="mt-4 hidden text-green-600 font-medium">
+          Pesan berhasil dikirim!
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-black bg-opacity-80">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <a href="#" class="text-2xl font-bold orbitron neon-text-blue"
+              >MF.</a
+            >
+          </div>
+          <div class="text-center md:text-right">
+            <p class="text-gray-400">
+              © 2023 Muhammad Fikry. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a
+      href="#home"
+      class="fixed bottom-8 right-8 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition duration-300 shadow-lg z-50"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        ></path>
+      </svg>
+    </a>
+
+    <script>
+      function showImage(img) {
+        const modalImage = document.getElementById("modalImage");
+        modalImage.src = img.src; // Set source gambar yang diklik ke modal
+      }
+
+      // Notifikasi untuk Formulir Kontak
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const formData = new FormData(form);
+
+          try {
+            const response = await fetch("https://formspree.io/f/mrbkoqyb", {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (response.ok) {
+              form.reset();
+
+              // ✅ Show pop-up sukses
+              Swal.fire({
+                icon: "success",
+                title: "Pesan berhasil dikirim!",
+                showConfirmButton: false,
+                timer: 2000,
+                timerProgressBar: true,
+              });
+            } else {
+              // ❌ Gagal kirim
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Gagal mengirim pesan. Coba lagi nanti.",
+              });
+            }
+          } catch (error) {
+            Swal.fire({
+              icon: "error",
+              title: "Error!",
+              text: error.message,
+            });
+          }
+        });
+
+      // Initialize Vanta.js background
+      VANTA.NET({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x3f8fff,
+        backgroundColor: 0x0f0f1a,
+        points: 12.0,
+        maxDistance: 20.0,
+        spacing: 15.0,
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.querySelector(".md\\:hidden");
+      const mobileMenu = document.querySelector(".hidden.md\\:flex");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+        mobileMenu.classList.toggle("flex-col");
+        mobileMenu.classList.toggle("absolute");
+        mobileMenu.classList.toggle("top-16");
+        mobileMenu.classList.toggle("left-0");
+        mobileMenu.classList.toggle("right-0");
+        mobileMenu.classList.toggle("bg-gray-900");
+        mobileMenu.classList.toggle("p-4");
+        mobileMenu.classList.toggle("space-y-4");
+        mobileMenu.classList.toggle("space-x-0");
+        mobileMenu.classList.toggle("md\\:space-x-8");
+        mobileMenu.classList.toggle("md\\:space-y-0");
+      });
+
+      // Animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fadeIn");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("section").forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>
