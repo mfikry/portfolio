@@ -193,16 +193,17 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-900 bg-opacity-90 relative">
+    <section id="about" class="py-24 bg-gray-900 bg-opacity-90 relative">
       <div class="container mx-auto px-6">
         <h2
-          class="text-3xl md:text-4xl font-bold mb-16 text-center section-title neon-text-blue"
+          class="text-3xl md:text-4xl font-bold mb-20 text-center section-title neon-text-blue"
         >
           About Me
         </h2>
 
-        <div class="flex flex-col lg:flex-row items-center">
-          <div class="lg:w-1/3 mb-12 lg:mb-0 flex justify-center">
+        <div class="flex flex-col lg:flex-row items-start gap-12">
+          <!-- LEFT : PROFILE -->
+          <div class="lg:w-1/3 flex flex-col items-center">
             <div class="relative w-64 h-64 md:w-80 md:h-80">
               <div
                 class="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400 to-green-400 p-1"
@@ -214,27 +215,65 @@
                 />
               </div>
               <div
-                class="absolute -bottom-5 -right-5 w-24 h-24 bg-pink-400 rounded-full opacity-20 filter blur-xl"
+                class="absolute -bottom-6 -right-6 w-24 h-24 bg-pink-400 rounded-full opacity-20 blur-xl"
               ></div>
             </div>
+
+            <p class="mt-6 text-center text-sm text-gray-400">
+              Independent Software Developer<br />
+              <span class="text-gray-500">Jakarta, Indonesia</span>
+            </p>
           </div>
 
-          <div class="lg:w-2/3 lg:pl-12">
+          <!-- RIGHT : CONTENT -->
+          <div class="lg:w-2/3">
             <h3 class="text-2xl font-bold mb-6 neon-text-pink">Who am I?</h3>
-            <p class="text-lg mb-8">
-              Experienced in developing responsive and visually appealing web
-              applications using modern frontend technologies. Skilled in
-              creating clean and efficient code with HTML, CSS, JavaScript, and
-              frameworks such as React and Next.js. Proficient in translating
-              design mockups into functional user interfaces, optimizing
-              performance, and ensuring cross-browser compatibility. Strong
-              understanding of UX/UI principles and accessibility standards.
-              Team-oriented with excellent problem-solving and communication
-              skills, dedicated to delivering high-quality, user-centric web
-              solutions.
-            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="max-w-3xl space-y-5 text-lg leading-relaxed">
+              <p>
+                Experienced in developing
+                <span class="text-blue-300 font-medium"
+                  >responsive and visually appealing web applications</span
+                >
+                using modern frontend technologies such as HTML, CSS,
+                JavaScript, React, and Next.js.
+              </p>
+
+              <p>
+                Also experienced in building
+                <span class="text-green-300 font-medium"
+                  >desktop applications and browser extensions</span
+                >
+                for automation workflows using Python, Qt (PySide6), and
+                JavaScript, including AI-powered metadata generation for images
+                and videos processing 1,000+ media assets.
+              </p>
+
+              <p>
+                Strong understanding of
+                <span class="text-pink-300 font-medium"
+                  >UX/UI principles, accessibility, and performance
+                  optimization</span
+                >
+                across web and desktop platforms, with hands-on experience in
+                packaging and distributing Windows applications.
+              </p>
+
+              <p>
+                Team-oriented problem solver with strong communication skills,
+                committed to delivering
+                <span class="text-blue-300 font-medium"
+                  >high-quality, user-centric, and automation-driven
+                  solutions</span
+                >.
+              </p>
+            </div>
+
+            <!-- SKILLS -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12 pt-10 border-t border-gray-700"
+            >
+              <!-- PERSONAL -->
               <div>
                 <h4 class="text-xl font-bold mb-4 neon-text-green">
                   Personal Skills
@@ -242,26 +281,27 @@
                 <ul class="space-y-3">
                   <li class="flex items-center">
                     <span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                    <span>Critical Thinking</span>
+                    Critical Thinking
                   </li>
                   <li class="flex items-center">
                     <span class="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
-                    <span>Team Collaboration</span>
+                    Team Collaboration
                   </li>
                   <li class="flex items-center">
                     <span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                    <span>Problem Solving</span>
+                    Problem Solving
                   </li>
                 </ul>
               </div>
 
+              <!-- TECH -->
               <div>
                 <h4 class="text-xl font-bold mb-4 neon-text-blue">
                   Technical Skills
                 </h4>
                 <div class="space-y-4">
                   <div>
-                    <div class="flex justify-between mb-1">
+                    <div class="flex justify-between text-sm mb-1">
                       <span>SQL, MySQL, PostgreSQL</span>
                       <span>90%</span>
                     </div>
@@ -269,48 +309,40 @@
                       <div class="skill-progress" style="width: 90%"></div>
                     </div>
                   </div>
+
                   <div>
-                    <div class="flex justify-between mb-1">
-                      <span>PHP, Python, React, HTML/CSS</span>
+                    <div class="flex justify-between text-sm mb-1">
+                      <span>Python, React, HTML/CSS</span>
                       <span>85%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 85%"></div>
                     </div>
                   </div>
+
                   <div>
-                    <div class="flex justify-between mb-1">
-                      <span>Next JS, Laravel, Selenium</span>
+                    <div class="flex justify-between text-sm mb-1">
+                      <span>Next.js, Laravel, Selenium</span>
                       <span>80%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 80%"></div>
                     </div>
                   </div>
+
                   <div>
-                    <div class="flex justify-between mb-1">
-                      <span
-                        >Operating System, Automation Testing, Hardware &
-                        Network</span
-                      >
+                    <div class="flex justify-between text-sm mb-1">
+                      <span>OS, Automation Testing, Network</span>
                       <span>80%</span>
                     </div>
                     <div class="skill-bar">
                       <div class="skill-progress" style="width: 80%"></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="flex justify-between mb-1">
-                      <span>MS Office</span>
-                      <span>95%</span>
-                    </div>
-                    <div class="skill-bar">
-                      <div class="skill-progress" style="width: 95%"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- END SKILLS -->
           </div>
         </div>
       </div>
@@ -328,7 +360,46 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h3 class="text-2xl font-bold mb-8 neon-text-blue">Experience</h3>
+            <!-- experience 1 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="bg-gray-900 bg-opacity-50 p-6 rounded-xl">
+                <h4 class="text-xl font-bold mb-2 neon-text-green">
+                  Independent Software Developer (Desktop & Automation)
+                </h4>
+                <p class="text-blue-300 mb-2">Freelance | 2025 – Present</p>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>
+                    Developed desktop applications and browser extensions for
+                    AI-based metadata automation using Python and JavaScript.
+                  </li>
+                  <li>
+                    Integrated AI Vision APIs to automatically generate titles,
+                    descriptions, and keywords for images and videos.
+                  </li>
+                  <li>
+                    Implemented batch processing pipelines handling 1,000+ media
+                    assets, including local file system management and REST API
+                    integration.
+                  </li>
+                  <li>
+                    Built JavaScript-based browser extensions leveraging Chrome
+                    Extension APIs and DOM automation for AI image and video
+                    generation workflows.
+                  </li>
+                  <li>
+                    Packaged and distributed Windows desktop applications (.exe)
+                    using PyInstaller and Inno Setup.
+                  </li>
+                  <li>
+                    Applied Agile-based development with iterative improvements
+                    driven by continuous user feedback.
+                  </li>
+                </ul>
+              </div>
+            </div>
 
+            <!-- experience 2 -->
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="bg-gray-900 bg-opacity-50 p-6 rounded-xl">
@@ -852,6 +923,65 @@
               <span
                 class="px-3 py-1 bg-cyan-900 bg-opacity-50 text-cyan-300 rounded-full text-sm"
                 >Tailwind CSS</span
+              >
+            </div>
+          </div>
+          <!-- Project 9 -->
+          <div
+            class="project-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg"
+          >
+            <div
+              class="mb-4 h-40 bg-gray-800 rounded-lg flex items-center justify-center"
+            >
+              <img
+                src="images/project9.png"
+                alt="Metadata Automation App"
+                class="w-full h-full object-cover rounded-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="showImage(this)"
+              />
+            </div>
+            <a href="https://lynk.id/feynoir/xg1e3pzjd4x2" class="block">
+              <h3 class="text-xl font-bold mb-2 neon-text-blue">
+                Metadata Automation App
+              </h3>
+            </a>
+            <p class="text-gray-300 mb-4">
+              Metadata App is a desktop application developed to streamline
+              metadata management for digital assets. It enables efficient
+              editing and embedding of metadata for images and videos, helping
+              improve workflow consistency and productivity for content
+              creators.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-yellow-900 bg-opacity-50 text-yellow-300 rounded-full text-sm"
+                >Python</span
+              >
+              <span
+                class="px-3 py-1 bg-cyan-900 bg-opacity-50 text-cyan-300 rounded-full text-sm"
+                >JavaScript</span
+              >
+              <span
+                class="px-3 py-1 bg-blue-900 bg-opacity-50 text-blue-300 rounded-full text-sm"
+                >PySide6 (Qt)</span
+              >
+              <span
+                class="px-3 py-1 bg-purple-900 bg-opacity-50 text-purple-300 rounded-full text-sm"
+                >ExifTool</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-900 bg-opacity-50 text-slate-300 rounded-full text-sm"
+                >Local File System</span
+              >
+              <span
+                class="px-3 py-1 bg-pink-900 bg-opacity-50 text-pink-300 rounded-full text-sm"
+                >REST API Integration</span
+              >
+              <span
+                class="px-3 py-1 bg-green-900 bg-opacity-50 text-green-300 rounded-full text-sm"
+                >FFmpeg</span
               >
             </div>
           </div>
